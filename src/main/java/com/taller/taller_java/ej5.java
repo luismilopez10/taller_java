@@ -6,18 +6,14 @@ package com.taller.taller_java;
 
 public class ej5 {
     public static void main(String[] args) {
-        fncParImpar(1,100);
+        fncOddCouple(1,100);
     }
 
-    public static void fncParImpar(int inicio, int fin){
-        while (inicio <= fin){
-            if (inicio%2==0) {
-                System.out.println(inicio + " es par");
-                inicio++;
-                continue;
-            }
-            System.out.println(inicio + " es impar");
-            inicio++;
+    public static void fncOddCouple(int first, int last){
+        while (first <= last){
+            String result = first%2==0 ? " es par" : " es impar";
+            System.out.println(first + result);
+            first++;
         }
     }
 }

@@ -8,26 +8,24 @@ import java.util.Scanner;
 
 public class ej2 {
     public static void main(String[] args){
-        int x;
-        int y;
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese el primer número: ");
-        x = scanner.nextInt();
+        int x = scanner.nextInt();
 
         System.out.print("Ingrese el segundo número: ");
-        y = scanner.nextInt();
+        int y = scanner.nextInt();
 
-        System.out.println(fncCompare(x, y));
+        String respuesta = "Son iguales";
+
+        if (x != y){
+            respuesta = "El número mayor es: " +  String.valueOf(fncBiggerNumber(x,y));
+        }
+
+        System.out.println(respuesta);
     }
 
-    static String fncCompare(int x, int y){
-        if (x > y){
-            return "El número mayor es: " + x;
-        }
-        if (y > x){
-            return "El número mayor es: " + y;
-        }
-        return "Los números son iguales";
+    public static int fncBiggerNumber(int x, int y){
+        return x>y ? x : y;
     }
 }

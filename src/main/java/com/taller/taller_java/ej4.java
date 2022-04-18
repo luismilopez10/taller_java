@@ -9,14 +9,14 @@ import javax.swing.*;
 
 public class ej4 {
     public static void main(String[] args) {
-        String precio = JOptionPane.showInputDialog("Ingrese el precio del producto");
-        double precioConIVA = fncCalcularPrecioConIVA(Double.parseDouble(precio));
+        double price = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el precio del producto"));
+        double finalPrice = fncCalcFinalPrice(price);
 
-        System.out.println("El precio del producto con IVA es: $" + precioConIVA);
+        System.out.println("El precio del producto con IVA es: $" + finalPrice);
     }
 
-    public static double fncCalcularPrecioConIVA(double precio){
-        final double IVA = 21;
-        return precio * (IVA/100+1);
+    public static double fncCalcFinalPrice(double price){
+        final double IVA = 0.21;
+        return price * (IVA+1);
     }
 }

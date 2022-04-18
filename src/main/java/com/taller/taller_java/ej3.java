@@ -9,13 +9,13 @@ import javax.swing.JOptionPane;
 
 public class ej3 {
     public static void main(String[] args) {
-        String radio = JOptionPane.showInputDialog("Ingrese el radio");
+        String ratio = JOptionPane.showInputDialog("Ingrese el radio");
 
-        System.out.println("El área del círculo de radio: " + radio + " es: "
-                + (fncCalcularArea(Double.parseDouble(radio))) + " cm^2");
+        System.out.println("El área del círculo de radio: " + ratio + " es: "
+                + (fncCalcArea(Double.parseDouble(ratio))) + " cm^2");
     }
 
-    public static double fncCalcularArea(double radio){
-        return Math.PI * Math.pow(radio, 2);
+    public static double fncCalcArea(double ratio){
+        return Math.PI * Math.pow(ratio, 2);
     }
 }

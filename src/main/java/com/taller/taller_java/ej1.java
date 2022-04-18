@@ -8,18 +8,17 @@ package com.taller.taller_java;
 public class ej1 {
     public static void main(String[] args) {
         int x = 0;
-        int y = 1;
+        int y = -5;
+        String result = "Son iguales";
 
-        System.out.println(fncCompare(x, y));
+        if (x != y){
+            result = "El número mayor es: " +  String.valueOf(fncGreater(x,y));
+        }
+
+        System.out.println(result);
     }
 
-    static String fncCompare(int x, int y){
-        if (x > y){
-            return "El número mayor es: " + x;
-        }
-        if (y > x){
-            return "El número mayor es: " + y;
-        }
-        return "Los números son iguales";
+    static int fncGreater(int x, int y){
+        return x>y ? x : y;
     }
 }
