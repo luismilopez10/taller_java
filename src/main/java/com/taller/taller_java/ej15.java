@@ -21,28 +21,31 @@ import java.util.Scanner;
 
 public class ej15 {
     public static void main(String[] args) {
-        printMenu();
+        fncPrintMenu();
+        fncChooseOption();
+    }
+
+    static void fncChooseOption() {
         Scanner scanner = new Scanner(System.in);
         int option;
-
         do {
             System.out.print("\nElija una opción del menú: ");
             option = scanner.nextInt();
             switch (option) {
                 case 1,2,3,4,5,6,7:
-                    printMenu();
+                    fncPrintMenu();
                     break;
                 case 8:
                     break;
                 default:
                     System.out.println("OPCIÓN INCORRECTA\n");
-                    printMenu();
+                    fncPrintMenu();
                     break;
             }
         }while (option!=8);
     }
 
-    static void printMenu(){
+    static void fncPrintMenu(){
         System.out.println(
                 "\n****** GESTION CINEMATOGRÁFICA ********" + "\n" +
                 "1-NUEVO ACTOR" + "\n" +
