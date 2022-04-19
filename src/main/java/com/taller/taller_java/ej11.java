@@ -1,9 +1,7 @@
 package com.taller.taller_java;
 
 import javax.swing.*;
-
 import org.apache.commons.lang3.StringUtils;
-
 import java.util.Locale;
 
 /*
@@ -14,7 +12,7 @@ import java.util.Locale;
 public class ej11 {
     public static void main(String[] args) {
         String phrase = JOptionPane.showInputDialog("Ingrese una frase");
-        System.out.println("La frase tiene " + phrase.length() + " letras");
+        System.out.println("La frase '" + phrase + "' tiene una longitud de: " + phrase.length());
         fncVowelCounter(phrase);
     }
 
