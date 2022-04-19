@@ -15,18 +15,28 @@ public class Main {
         Persona persona2 = new Persona(name, age, gender);
         Persona persona3 = new Persona();
         persona3.setName("José");
-        persona3.setAge(21);
+        persona3.setAge(15);
         persona3.setGender('H');
-        persona3.setWeight(128);
+        persona3.setWeight(85);
         persona3.setHeight(1.72);
 
         // Comprobando peso de las personas:
-        System.out.println(fncIMCPersona(persona1));
-        System.out.println(fncIMCPersona(persona2));
-        System.out.println(fncIMCPersona(persona3));
+        System.out.println(fncPrintIMCPersona(persona1));
+        System.out.println(fncPrintIMCPersona(persona2));
+        System.out.println(fncPrintIMCPersona(persona3));
+
+        // Comprobando si es mayor de edad:
+        System.out.println(fncPrintIsAdult(persona1));
+        System.out.println(fncPrintIsAdult(persona2));
+        System.out.println(fncPrintIsAdult(persona3));
+
+        // Información de cada persona:
+        System.out.println(persona1.toString());
+        System.out.println(persona2.toString());
+        System.out.println(persona3.toString());
     }
 
-    static String fncIMCPersona(Persona persona){
+    static String fncPrintIMCPersona(Persona persona){
         int IMC = persona.fncCalcIMC();
         if (IMC == -1){
             return "Peso bajo";
@@ -35,5 +45,12 @@ public class Main {
             return "Peso ideal";
         }
         return "Sobrepeso";
+    }
+
+    static String fncPrintIsAdult(Persona persona){
+        if (persona.fncIsAdult()){
+            return "Es adulto";
+        }
+        return "No es adulto";
     }
 }
