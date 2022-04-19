@@ -1,6 +1,9 @@
 package com.taller.taller_java;
 
 import javax.swing.*;
+
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Locale;
 
 /*
@@ -11,18 +14,22 @@ import java.util.Locale;
 public class ej11 {
     public static void main(String[] args) {
         String phrase = JOptionPane.showInputDialog("Ingrese una frase");
-        int length = phrase.length();
-        boolean vocalA = phrase.toLowerCase(Locale.ROOT).contains("a");
-        boolean vocalE = phrase.toLowerCase(Locale.ROOT).contains("e");
-        boolean vocalI = phrase.toLowerCase(Locale.ROOT).contains("i");
-        boolean vocalO = phrase.toLowerCase(Locale.ROOT).contains("o");
-        boolean vocalU = phrase.toLowerCase(Locale.ROOT).contains("u");
+        System.out.println("La frase tiene " + phrase.length() + " letras");
+        fncVowelCounter(phrase);
+    }
 
-        System.out.println("La longitud de la frase es " + length + ", y con tiene las vocales: " + "\n"
-                + "a: " + vocalA + "\n"
-                + "e: " + vocalE + "\n"
-                + "i: " + vocalI + "\n"
-                + "o: " + vocalO + "\n"
-                + "u: " + vocalU + "\n");
+    static void fncVowelCounter(String phrase) {
+        int vowelACounter = StringUtils.countMatches(phrase.toLowerCase(Locale.ROOT), "a");
+        int vowelECounter = StringUtils.countMatches(phrase.toLowerCase(Locale.ROOT), "e");
+        int vowelICounter = StringUtils.countMatches(phrase.toLowerCase(Locale.ROOT), "i");
+        int vowelOCounter = StringUtils.countMatches(phrase.toLowerCase(Locale.ROOT), "o");
+        int vowelUCounter = StringUtils.countMatches(phrase.toLowerCase(Locale.ROOT), "u");
+
+        System.out.println("Las vocales se repiten: \n" +
+                vowelACounter + " veces 'A',\n" +
+                vowelECounter + " veces 'E',\n" +
+                vowelICounter + " veces 'I',\n" +
+                vowelOCounter + " veces 'O',\n" +
+                vowelUCounter + " veces 'U'.");
     }
 }
