@@ -31,18 +31,22 @@ public class ej15 {
         do {
             System.out.print("\nElija una opción del menú: ");
             option = scanner.nextInt();
-            switch (option) {
-                case 1,2,3,4,5,6,7:
-                    fncPrintMenu();
-                    break;
-                case 8:
-                    break;
-                default:
-                    System.out.println("OPCIÓN INCORRECTA\n");
-                    fncPrintMenu();
-                    break;
-            }
+            fncChosenOption(option);
         }while (option!=8);
+    }
+
+    static void fncChosenOption(int option){
+        switch (option) {
+            case 1,2,3,4,5,6,7:
+                fncPrintMenu();
+                break;
+            case 8:
+                break;
+            default:
+                System.out.println("-----OPCIÓN INCORRECTA-----");
+                fncPrintMenu();
+                break;
+        }
     }
 
     static void fncPrintMenu(){
