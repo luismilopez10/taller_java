@@ -6,8 +6,6 @@ N
 ^
 .src/main/java/com/taller/taller_java/ej14.java,d\a\dab57789c303228bc3926c13a64450aa1c13fe67
 ^
-.src/main/java/com/taller/taller_java/ej13.java,5\c\5cdea569e8540027c72412122e81aafd8970a291
-^
 .src/main/java/com/taller/taller_java/ej12.java,4\3\438783a0de324bceaafbb72795f678ae34a7254f
 ^
 .src/main/java/com/taller/taller_java/ej11.java,e\3\e32fb52e8fd49bb34b3c9372c3c294e75e6b0be1
