@@ -9,10 +9,6 @@ N
 .src/main/java/com/taller/taller_java/ej13.java,5\c\5cdea569e8540027c72412122e81aafd8970a291
 ^
 .src/main/java/com/taller/taller_java/ej12.java,4\3\438783a0de324bceaafbb72795f678ae34a7254f
-c
-3src/main/java/com/taller/taller_java/ej16/Main.java,7\4\7429d6564c2a2f080df5c355f065b40f5f8a6927
-f
-6src/main/java/com/taller/taller_java/ej16/Persona.java,d\a\dab27f9ba653d744ce69c18f7eba1c1dea37be0c
 ^
 .src/main/java/com/taller/taller_java/ej11.java,e\3\e32fb52e8fd49bb34b3c9372c3c294e75e6b0be1
 ^
@@ -33,5 +29,3 @@ f
 -src/main/java/com/taller/taller_java/ej3.java,6\b\6bc8b9a60270df225aa17c135404571f10d9b9b8
 ]
 -src/main/java/com/taller/taller_java/ej2.java,f\9\f9b88bbd0c4e13378ce31a70c86bbce7b67ea472
-c
-3src/main/java/com/taller/taller_java/ej17/Main.java,6\9\697c9e60e4f73cfc4fde61514632bc37ac88764d

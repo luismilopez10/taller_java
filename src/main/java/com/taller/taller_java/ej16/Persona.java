@@ -4,33 +4,39 @@ import org.apache.commons.lang3.StringUtils;
 import static java.lang.Double.isNaN;
 
 public class Persona {
-    private String name = StringUtils.EMPTY;
-    private int age = 0;
+    private static final String NAME = StringUtils.EMPTY;
+    private static final Integer AGE = 0;
+    private static final Character GENDER = 'H';
+    private static final Double WEIGHT = 0.0;
+    private static final Double HEIGHT = 0.0;
+
+    private String name = NAME;
+    private Integer age = AGE;
     private String DNI;
-    private char gender = 'H';
-    private double weight = 0;
-    private double height = 0;
+    private Character gender = GENDER;
+    private Double weight = WEIGHT;
+    private Double height = HEIGHT;
 
     public Persona(){this.DNI = fncGenerateDNI();}
 
-    public Persona(String name, int age, char gender){
+    public Persona(String name, Integer age, Character gender){
         this.name = name;
         this.age = age;
-        this.gender = gender;
+        this.gender = fncCheckGender(gender);
         this.DNI = fncGenerateDNI();
     }
 
-    public Persona(String name, int age, char gender,double weight, double height){
+    public Persona(String name, Integer age, Character gender,Double weight, Double height){
         this.name = name;
         this.age = age;
-        this.gender = gender;
+        this.gender = fncCheckGender(gender);
         this.weight = weight;
         this.height = height;
         this.DNI = fncGenerateDNI();
     }
 
     public int fncCalcIMC(){
-        double IMC = this.weight/Math.pow(this.height,2);
+        Double IMC = this.weight/Math.pow(this.height,2);
         IMC = isNaN(IMC) ? 0 : IMC;
         return IMC<20 ? -1 : (IMC>25 ? 1 : 0);
     }
@@ -39,11 +45,10 @@ public class Persona {
         return this.age>=18 ? true : false;
     }
 
-    public char fncCheckGender(char gender){
-        if (gender != 'H' && gender != 'M'){
-            gender = 'H';
-        }
-        return gender;
+    public Character fncCheckGender(Character gender){
+        return gender != 'H'
+                && gender != 'M'
+                ? 'H' : gender;
     }
 
     @Override
@@ -59,27 +64,36 @@ public class Persona {
     }
 
     private String fncGenerateDNI(){
-        int DNI = (int) (Math.random() * 100000000);
-        return String.valueOf(DNI);
+        Integer DNI = (int) (Math.random() * 100000000);
+        return fncGenerateLetterFromNumber(DNI);
+    }
+
+    private String fncGenerateLetterFromNumber(Integer num){
+        String DNI = "";
+        String number = String.valueOf(num);
+        for (char ch: number.toCharArray()) {
+            DNI = DNI + (char) ((int)ch + 17);
+        }
+        return DNI;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
-    public void setGender(char gender) {
+    public void setGender(Character gender) {
         this.gender = gender;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 }
