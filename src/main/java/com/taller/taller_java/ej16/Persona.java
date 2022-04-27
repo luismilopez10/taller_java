@@ -35,32 +35,10 @@ public class Persona {
         this.DNI = fncGenerateDNI();
     }
 
-    public int fncCalcIMC(){
-        Double IMC = this.weight/Math.pow(this.height,2);
-        IMC = isNaN(IMC) ? 0 : IMC;
-        return IMC<20 ? -1 : (IMC>25 ? 1 : 0);
-    }
-
-    public boolean fncIsAdult(){
-        return this.age>=18 ? true : false;
-    }
-
-    public Character fncCheckGender(Character gender){
+    private Character fncCheckGender(Character gender){
         return gender != 'H'
                 && gender != 'M'
                 ? 'H' : gender;
-    }
-
-    @Override
-    public String toString() {
-        return "Persona{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", DNI='" + DNI + '\'' +
-                ", gender=" + gender +
-                ", weight=" + weight +
-                ", height=" + height +
-                '}';
     }
 
     private String fncGenerateDNI(){
@@ -75,6 +53,28 @@ public class Persona {
             DNI = DNI + (char) ((int)ch + 17);
         }
         return DNI;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", DNI='" + DNI + '\'' +
+                ", gender=" + gender +
+                ", weight=" + weight +
+                ", height=" + height +
+                '}';
+    }
+
+    public int fncCalcIMC(){
+        Double IMC = this.weight/Math.pow(this.height,2);
+        IMC = isNaN(IMC) ? 0 : IMC;
+        return IMC<20 ? -1 : (IMC>25 ? 1 : 0);
+    }
+
+    public boolean fncIsAdult(){
+        return this.age>=18 ? true : false;
     }
 
     public void setName(String name) {

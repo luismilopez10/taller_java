@@ -15,10 +15,10 @@ public class Main {
         Persona persona2 = new Persona(name, age, gender);
         Persona persona3 = new Persona();
         persona3.setName("José");
-        persona3.setAge(15);
+        persona3.setAge(17);
         persona3.setGender('H');
         persona3.setWeight(85.0);
-        persona3.setHeight(1.72);
+        persona3.setHeight(1.70);
 
         // Comprobando estado de peso de las personas:
         System.out.println(fncPrintIMCPersona(persona1));
