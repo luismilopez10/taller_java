@@ -3,22 +3,6 @@ N
 src/main/java/module-info.java,1\c\1c89a5491fbfda3fb050196d6a239f20200296e7
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-^
-.src/main/java/com/taller/taller_java/ej14.java,d\a\dab57789c303228bc3926c13a64450aa1c13fe67
-^
-.src/main/java/com/taller/taller_java/ej12.java,4\3\438783a0de324bceaafbb72795f678ae34a7254f
-^
-.src/main/java/com/taller/taller_java/ej11.java,e\3\e32fb52e8fd49bb34b3c9372c3c294e75e6b0be1
-^
-.src/main/java/com/taller/taller_java/ej10.java,d\a\da479e7b7a2b89e446d5951f77fddf33f9d8eba4
-]
--src/main/java/com/taller/taller_java/ej9.java,7\4\74192108309c1ff14e9ad83be9d7ff87726f4f9d
-]
--src/main/java/com/taller/taller_java/ej8.java,0\4\04254bebaee8d03ffd7d251fb5af1186d9b85604
-]
--src/main/java/com/taller/taller_java/ej7.java,b\e\beeddd7f9b1d46792a1282d7c641a673f69affb5
-]
--src/main/java/com/taller/taller_java/ej6.java,4\7\473dd12578ff102cbca5975671f0126cdbdd2e3a
 ]
 -src/main/java/com/taller/taller_java/ej5.java,2\4\24b92a205888cadc33800fbaef7f304f6119e0ed
 ]
@@ -27,3 +11,13 @@ N
 -src/main/java/com/taller/taller_java/ej3.java,6\b\6bc8b9a60270df225aa17c135404571f10d9b9b8
 ]
 -src/main/java/com/taller/taller_java/ej2.java,f\9\f9b88bbd0c4e13378ce31a70c86bbce7b67ea472
+p
+@src/main/java/com/taller/taller_java/ej17/ConsumoEnergetico.java,c\7\c7725449c6cd7edc153a6c0b72b380d36b24415f
+d
+4src/main/java/com/taller/taller_java/ej17/Color.java,1\0\109079639c91a429a1b8cfba324f0ebb15e9b111
+o
+?src/main/java/com/taller/taller_java/ej17/Electrodomestico.java,c\e\cea025891c59c49c185067c8cd3a04d9aed6494b
+c
+3src/main/java/com/taller/taller_java/ej16/Main.java,7\4\7429d6564c2a2f080df5c355f065b40f5f8a6927
+i
+9src/main/java/com/taller/taller_java/ej17/Television.java,8\4\84f69e0da05e74d7387603c88228eb0d8748ce95
